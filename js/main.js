@@ -55,7 +55,7 @@ $(function() {
             $('.js-nav-item[data-index="'+i+'"] .js-nav-text').text(lang[currentLang]['nav'][i]);
             sectionTitle.eq(i).text(lang[currentLang]['section-title'][i]);
             $('option').removeAttr('selected', 'selected');
-            $('option[value="'+ localLang +'"]').attr('selected', 'selected');
+            $('option[value="'+ currentLang +'"]').attr('selected', 'selected');
         });
     }
     
