@@ -25,16 +25,16 @@ $(function() {
         myName = $('.js-my-name');
     let localeLanguage = navigator.language || navigator.userLanguage;
     
-    $.getJSON("/js/languages.json", function( data ) {
-        languageUpdate(localeLanguage, data);
 
-        select.on('change', function() {
-            let val = $(this).val();
-            setTimeout(function() {
-                languageUpdate(val, data);
-            }, 500);
-        });
+    languageUpdate(localeLanguage, languages);
+
+    select.on('change', function() {
+        let val = $(this).val();
+        setTimeout(function() {
+            languageUpdate(val, languages);
+        }, 500);
     });
+
     function languageUpdate(localLang, lang) {
         let lg = localLang.slice(0, 2);
         let currentLang;
