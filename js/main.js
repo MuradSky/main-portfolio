@@ -52,7 +52,7 @@ $(function() {
         $.each(link, function(i) {
             $(this).text(lang[currentLang]['link']);
             text.eq(i).text(lang[currentLang]['text'] + ' 0' + (i + 1));
-            navText.eq(i).text(lang[currentLang]['nav'][i]);
+            $('.js-nav-item[data-index="'+i+'"] .js-nav-text').text(lang[currentLang]['nav'][i]);
             sectionTitle.eq(i).text(lang[currentLang]['section-title'][i]);
             $('option').removeAttr('selected', 'selected');
             $('option[value="'+ localLang +'"]').attr('selected', 'selected');
